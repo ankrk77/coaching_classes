@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: rgb(51, 4, 4);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0073e6;
+}
+
+.logo-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right:30px;
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+    background-color: #005bb5;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.banner {
+    background: url('Coaching_logo_background.jpg') no-repeat center center/cover;
+    color:yellow;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: green; }
+    100% { color: blue; }
+}
+
+.banner h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    animation: colorChange 15s infinite;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: colorChange 15s infinite;
+}
+
+.banner .btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.banner .btn:hover {
+    background-color: #ff3300;
+}
+
+.section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0073e6;
+    text-decoration:underline;
+}
+
+.course-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+}
+
+.course-item {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 28%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-10px);
+}
+
+.course-item h3 {
+    font-size: 1.8rem;
+    color: #ff6600;
+    margin-bottom: 1rem;
+}
+.director-photo {
+    background-image: url("Ramakant_yadav.jpg");
+    width: 300px; 
+    height: 300px; 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+    border: 3px solid #000; 
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; 
+    transition: all 1s ease-in-out; 
+    animation: morph 8s ease-in-out infinite; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+    @media (max-width: 500px) {
+        width: 200px; 
+        height: 200px; 
+    }
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+
+.director-info {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.director-info h3 {
+    font-size: 2.2rem;
+    color: #0073e6;
+}
+
+.director-info p {
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.section h2 ul{
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo h1 {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .banner {
+        height: 350px;
+        padding: 2rem;
+    }
+
+    .banner h2 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .course-list {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .course-item {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .director-photo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .banner {
+        height: 300px;
+        padding: 1rem;
+    }
+
+    .banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .banner p {
+        font-size: 0.9rem;
+    }
+
+    .logo-img {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+    }
+
+    .director-info {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .director-photo {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    color: #0073e6;
+    font-size: 1.5rem;
+}
